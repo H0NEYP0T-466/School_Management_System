@@ -236,7 +236,7 @@ namespace SchoolMangementSystem
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(217, 24);
             this.label2.TabIndex = 1;
-            this.label2.Text = "Enrolled Students Today";
+            this.label2.Text = "Today's Student Records";
             // 
             // DashboardForm
             // 

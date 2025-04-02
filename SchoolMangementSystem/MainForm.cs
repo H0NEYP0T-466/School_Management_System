@@ -39,7 +39,7 @@ namespace SchoolMangementSystem
         {
             DialogResult check = MessageBox.Show("Are you sure you want to logout?", "Confirmation Message", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
 
-            if(check == DialogResult.Yes)
+            if (check == DialogResult.Yes)
             {
                 LoginForm lForm = new LoginForm();
                 lForm.Show();
@@ -49,11 +49,8 @@ namespace SchoolMangementSystem
 
         private void button1_Click(object sender, EventArgs e)
         {
-            DashboardForm dForm = new DashboardForm();
-            dForm.displayEnrolledStudentToday();
-            dForm.displayTotalGS();
-            dForm.displayTotalTT();
-            dForm.displayTotalES();
+          
+            RefreshDashboardData();
 
             dashboardForm1.Visible = true;
             dashboardForm1.Update();
@@ -67,6 +64,15 @@ namespace SchoolMangementSystem
             addStudentForm1.Visible = true;
             addStudentForm1.Update();
             addTeachersForm1.Visible = false;
+        }
+
+    
+        private void RefreshDashboardData()
+        {
+            dashboardForm1.displayEnrolledStudentToday();
+            dashboardForm1.displayTotalGS();
+            dashboardForm1.displayTotalTT();
+            dashboardForm1.displayTotalES();
         }
     }
 }

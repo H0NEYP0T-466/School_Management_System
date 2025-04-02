@@ -74,7 +74,7 @@ namespace SchoolMangementSystem
                                     "@teacherImage, @teacherStatus, @dateInsert)";
 
                                 // TO SAVE TO YOUR DIRECTORY
-                                string path = Path.Combine(@"C:\Users\Muhammad Fezan\Desktop\school_management\School-Management-System-using-CSharp\SchoolMangementSystem\SchoolMangementSystem\Teacher_Directory\", teacher_id.Text.Trim() + ".jpg");
+                                string path = Path.Combine(@"C:\Users\Muhammad Fezan\Desktop\DB-PROJECT\Images_Data\Teachers", teacher_id.Text.Trim() + ".jpg");
 
                                 string directoryPath = Path.GetDirectoryName(path);
 

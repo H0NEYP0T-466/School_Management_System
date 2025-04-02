@@ -46,7 +46,7 @@ namespace SchoolMangementSystem
                     {
                         connect.Open();
 
-                        // WE DON'T LIKE THE DUPLICATE STUDENT ID SO, WE NEED TO CHECK IF ON THE DATABASE HAS ALREADY TEACHER ID VALUE THAT SAME TO THE USER THAT WANT TO INSERT 
+                        // WE DON'T LIKE THE DUPLICATE STUDENT ID SO, WE NEED TO CHECK IF ON THE DATABASE HAS ALREADY Student ID VALUE THAT SAME TO THE USER THAT WANT TO INSERT 
                         string checkStudentID = "SELECT COUNT(*) FROM students WHERE student_id = @studentID";
 
                         using (SqlCommand checkSID = new SqlCommand(checkStudentID, connect))
@@ -71,7 +71,7 @@ namespace SchoolMangementSystem
                                     ", @dateInsert)";
 
                                 // TO SAVE TO YOUR DIRECTORY
-                                string path = Path.Combine(@"C:\Users\Muhammad Fezan\Desktop\school_management\School-Management-System-using-CSharp\SchoolMangementSystem\SchoolMangementSystem\Student_Directory\", student_id.Text.Trim() + ".jpg");
+                                string path = Path.Combine(@"C:\Users\Muhammad Fezan\Desktop\DB-PROJECT\Images_Data\Student", student_id.Text.Trim() + ".jpg");
 
                                 string directoryPath = Path.GetDirectoryName(path);
 
@@ -90,7 +90,7 @@ namespace SchoolMangementSystem
                                     cmd.Parameters.AddWithValue("@studentAddress", student_address.Text.Trim());
                                     cmd.Parameters.AddWithValue("@studentGrade", student_grade.Text.Trim());
                                     cmd.Parameters.AddWithValue("@studentSection", student_section.Text.Trim());
-                                    cmd.Parameters.AddWithValue("@studentImage", path);
+                                     cmd.Parameters.AddWithValue("@studentImage", path);
                                     cmd.Parameters.AddWithValue("@studentStatus", student_status.Text.Trim());
                                     cmd.Parameters.AddWithValue("@dateInsert", today.ToString());
 
